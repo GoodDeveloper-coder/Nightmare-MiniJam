@@ -1,0 +1,763 @@
+fileFormatVersion: 2
+guid: a93e9875ce13d16498b8aafc2aadfe47
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: '[FULL_AUTO]_Assault_rifle_V1.00_0'
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 0
+        width: 108
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1837cdc774a9a14e9d9cbeeb54b6478
+      internalID: 1029963158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL_AUTO]_Assault_rifle_V1.00_1'
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 0
+        width: 108
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a5a435e9a3ba2f4e9da2b27e52d3f76
+      internalID: -2073349920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL_AUTO]_Assault_rifle_V1.00_2'
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 37
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a4fe9797eef4874bb5a1357754ba25c
+      internalID: 1930767467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL_AUTO]_Assault_rifle_V1.00_3'
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 6
+        width: 98
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b708cca5c7ea2e428a9d25a90946aea
+      internalID: 1362376758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL_AUTO]_Assault_rifle_V1.00_4'
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 42
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3a7a9b0b0087f04785a5ea99165df6f
+      internalID: 929007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL_AUTO]_Assault_rifle_V1.00_5'
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 0
+        width: 108
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5db0e0af52dbfbd4f9fdd17336b8ea97
+      internalID: -390922788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL_AUTO]_Assault_rifle_V1.00_6'
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 42
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 094631f75f6ac8d44ab880ec558587bd
+      internalID: 912249428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL_AUTO]_Assault_rifle_V1.00_7'
+      rect:
+        serializedVersion: 2
+        x: 2292
+        y: 6
+        width: 98
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33f9524c0a610434a8e613ea2cdfd84e
+      internalID: 1195916303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL_AUTO]_Assault_rifle_V1.00_8'
+      rect:
+        serializedVersion: 2
+        x: 2412
+        y: 0
+        width: 108
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30387786db62a1a4c944b79066f9569f
+      internalID: 970280720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL_AUTO]_Assault_rifle_V1.00_9'
+      rect:
+        serializedVersion: 2
+        x: 2550
+        y: 6
+        width: 98
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50e58143b33ef1a4682dc5bd49524563
+      internalID: 1930918448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL_AUTO]_Assault_rifle_V1.00_10'
+      rect:
+        serializedVersion: 2
+        x: 2838
+        y: 42
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea41517ec2966394e89781647a3d2670
+      internalID: -831126357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL_AUTO]_Assault_rifle_V1.00_11'
+      rect:
+        serializedVersion: 2
+        x: 2934
+        y: 6
+        width: 98
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92ae35292d6d1de4eb3ce960cc22d73f
+      internalID: -1305193683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL_AUTO]_Assault_rifle_V1.00_12'
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6
+        width: 86
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c5e04bb978e3594ca47bd3608cb0d17
+      internalID: -1233252101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL_AUTO]_Assault_rifle_V1.00_13'
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 8
+        width: 85
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8aad43077057d54887c15f0041137d6
+      internalID: 589649217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL_AUTO]_Assault_rifle_V1.00_14'
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 6
+        width: 90
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d13cf895b22c1b041a236b306a6d10d4
+      internalID: -273975383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL_AUTO]_Assault_rifle_V1.00_15'
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 0
+        width: 99
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b813ed4f16614c84d93f58ce9a1da581
+      internalID: 1162477094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL_AUTO]_Assault_rifle_V1.00_16'
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 6
+        width: 107
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9537030babf159742afaf17a3d53bc3a
+      internalID: 1273280526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL_AUTO]_Assault_rifle_V1.00_17'
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 8
+        width: 85
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d169e91e93d56449a8a4fc2485c1b46
+      internalID: 568622587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL_AUTO]_Assault_rifle_V1.00_18'
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 6
+        width: 87
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9081bdf9b84e91f4d9249f9c2327b01a
+      internalID: -182813427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL_AUTO]_Assault_rifle_V1.00_19'
+      rect:
+        serializedVersion: 2
+        x: 1269
+        y: 0
+        width: 99
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8bab0d9d593c9b4ca40bb7408cfc2fe
+      internalID: -428356627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL_AUTO]_Assault_rifle_V1.00_20'
+      rect:
+        serializedVersion: 2
+        x: 1409
+        y: 8
+        width: 85
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8f199b33ef957e4a8c46d673cfc0d46
+      internalID: -1783427395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL_AUTO]_Assault_rifle_V1.00_21'
+      rect:
+        serializedVersion: 2
+        x: 1532
+        y: 6
+        width: 90
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55fac8b625ab84146b09f3e3e65d4549
+      internalID: 1487457971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL_AUTO]_Assault_rifle_V1.00_22'
+      rect:
+        serializedVersion: 2
+        x: 1793
+        y: 8
+        width: 85
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a451416ae30df7c44944c5d77b5e35c4
+      internalID: 1761822927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL_AUTO]_Assault_rifle_V1.00_23'
+      rect:
+        serializedVersion: 2
+        x: 1916
+        y: 6
+        width: 90
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc7098a2e0d562947816076675f972e3
+      internalID: 227733211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL_AUTO]_Assault_rifle_V1.00_24'
+      rect:
+        serializedVersion: 2
+        x: 2046
+        y: 6
+        width: 87
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bbb5155e5fe49146a87b19b977a963f
+      internalID: 1187476494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL_AUTO]_Assault_rifle_V1.00_25'
+      rect:
+        serializedVersion: 2
+        x: 2163
+        y: 0
+        width: 99
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9440eb1e9a4dc29488c01eb290553f9c
+      internalID: -945749987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL_AUTO]_Assault_rifle_V1.00_26'
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 6
+        width: 87
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cec0e2753777d9b488bac1ecc73da61e
+      internalID: -873074893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL_AUTO]_Assault_rifle_V1.00_27'
+      rect:
+        serializedVersion: 2
+        x: 2805
+        y: 0
+        width: 99
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ed68a2879c11ca4fb72f64cabceff26
+      internalID: 1415160836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      '[FULL_AUTO]_Assault_rifle_V1.00_0': 1029963158
+      '[FULL_AUTO]_Assault_rifle_V1.00_1': -2073349920
+      '[FULL_AUTO]_Assault_rifle_V1.00_10': -831126357
+      '[FULL_AUTO]_Assault_rifle_V1.00_11': -1305193683
+      '[FULL_AUTO]_Assault_rifle_V1.00_12': -1233252101
+      '[FULL_AUTO]_Assault_rifle_V1.00_13': 589649217
+      '[FULL_AUTO]_Assault_rifle_V1.00_14': -273975383
+      '[FULL_AUTO]_Assault_rifle_V1.00_15': 1162477094
+      '[FULL_AUTO]_Assault_rifle_V1.00_16': 1273280526
+      '[FULL_AUTO]_Assault_rifle_V1.00_17': 568622587
+      '[FULL_AUTO]_Assault_rifle_V1.00_18': -182813427
+      '[FULL_AUTO]_Assault_rifle_V1.00_19': -428356627
+      '[FULL_AUTO]_Assault_rifle_V1.00_2': 1930767467
+      '[FULL_AUTO]_Assault_rifle_V1.00_20': -1783427395
+      '[FULL_AUTO]_Assault_rifle_V1.00_21': 1487457971
+      '[FULL_AUTO]_Assault_rifle_V1.00_22': 1761822927
+      '[FULL_AUTO]_Assault_rifle_V1.00_23': 227733211
+      '[FULL_AUTO]_Assault_rifle_V1.00_24': 1187476494
+      '[FULL_AUTO]_Assault_rifle_V1.00_25': -945749987
+      '[FULL_AUTO]_Assault_rifle_V1.00_26': -873074893
+      '[FULL_AUTO]_Assault_rifle_V1.00_27': 1415160836
+      '[FULL_AUTO]_Assault_rifle_V1.00_3': 1362376758
+      '[FULL_AUTO]_Assault_rifle_V1.00_4': 929007
+      '[FULL_AUTO]_Assault_rifle_V1.00_5': -390922788
+      '[FULL_AUTO]_Assault_rifle_V1.00_6': 912249428
+      '[FULL_AUTO]_Assault_rifle_V1.00_7': 1195916303
+      '[FULL_AUTO]_Assault_rifle_V1.00_8': 970280720
+      '[FULL_AUTO]_Assault_rifle_V1.00_9': 1930918448
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
