@@ -28,7 +28,7 @@ public class Wave : MonoBehaviour
         _image.fillAmount = _currentSpawn / _maxSpawn;
 
         //Desactivate script SpawnEnemy
-        if (_currentSpawn >= 100) _spawnEnemy.enabled = false;
+        if (_currentSpawn >= 100f) _spawnEnemy.StopAllCoroutines();
     }
 
     public void set_currentSpawn(float _spawn) => _currentSpawn = _spawn;

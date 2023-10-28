@@ -12,9 +12,9 @@ public class SpawnEnemy : MonoBehaviour
     string _typeEnemy="Monster";
     // Start is called before the first frame update
 
-    private void Awake() => Instance = this; 
-    
-    void Start() => StartCoroutine(Spawn());
+    private void Awake() => Instance = this;
+
+    void Start() => StartSpawn();
 
     IEnumerator Spawn()
     {
@@ -27,7 +27,7 @@ public class SpawnEnemy : MonoBehaviour
         }
         
     }
-
+    public void StartSpawn()=> StartCoroutine(Spawn());
     public void SetTimeSpawn(float time) => _timeSpawn = time;
-    public void SetTimeSpawn(string enemy) => _typeEnemy = enemy;
+    public void SetTypeEnemy(string enemy) => _typeEnemy = enemy;
 }
