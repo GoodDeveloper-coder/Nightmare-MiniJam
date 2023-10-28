@@ -6,13 +6,14 @@ public class SpawnEnemy : MonoBehaviour
 {
     [SerializeField]  Transform[] _spawnPostion;
     int _randomPos;
-    float timeSpawn=0.5f;
+    float timeSpawn=1f;
     // Start is called before the first frame update
     void Start() => StartCoroutine(Spawn());
 
     IEnumerator Spawn()
     {
-        while(true)
+        yield return new WaitForSeconds(timeSpawn);
+        while (true)
         {
             _randomPos = Random.RandomRange(0, _spawnPostion.Length);
             Instantiate(Resources.Load("Monster"), _spawnPostion[_randomPos].position,Quaternion.identity);
