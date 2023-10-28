@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy 1
       objectReference: {fileID: 0}
+    - target: {fileID: 824292976528609421, guid: f9ea6b025c29afc42958907044ec960e, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 824292976528609423, guid: f9ea6b025c29afc42958907044ec960e, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2209,7 +2213,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tmp: {fileID: 652225305}
-  score: 0
 --- !u!4 &1540702633
 Transform:
   m_ObjectHideFlags: 0
@@ -2464,9 +2467,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3791a13f3a7512e46942c5a5563dad70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _anim: {fileID: 0}
-  _speed: 1
-  _player: {fileID: 1373265382}
+  _target: {fileID: 1373265382}
+  _speed: 2
 --- !u!95 &2099369760
 Animator:
   serializedVersion: 5
