@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float movementSpeedUpgrade;
     [SerializeField] private float immobilityDuration;
     [SerializeField] private float immobilityUpgrade;
+    
+    [SerializeField] private Room room;
 
     private bool inputMoveLeft;
     private bool inputMoveRight;
@@ -22,7 +24,7 @@ public class Player : MonoBehaviour
     private bool active;
     private float immobilityTime;
 
-    private bool newRoomTrigger;
+    private bool clearedRoom;
 
     // Start is called before the first frame update
     void Start()
@@ -61,8 +63,13 @@ public class Player : MonoBehaviour
         active = a;
     }
 
-    public bool GetNewRoomTrigger()
+    public void SetRoom(Room r)
     {
-        return newRoomTrigger;
+        room = r;
+    }
+
+    public bool GetClearedRoom()
+    {
+        return clearedRoom;
     }
 }
