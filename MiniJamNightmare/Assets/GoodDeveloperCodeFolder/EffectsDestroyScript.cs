@@ -19,7 +19,7 @@ public class EffectsDestroyScript : MonoBehaviour
 
     IEnumerator DestroyEffectTimer()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.4f);
         Destroy(this.gameObject);
     }
 }
