@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -127,7 +127,217 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: '[FIRE_ONLY] Assault_rifle_V1.00_0'
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 23
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 406cb07b42f67da4e8c88d7de7434b07
+      internalID: -712211272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FIRE_ONLY] Assault_rifle_V1.00_1'
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 44
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76d6cb2c7a420fb448a464c0036dc4f4
+      internalID: -2117253384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FIRE_ONLY] Assault_rifle_V1.00_2'
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 40
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d5f66f5f76a9bd4f84251dbb8a9517a
+      internalID: 968019450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FIRE_ONLY] Assault_rifle_V1.00_3'
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 36
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c49e9eec9b9c84748b121d405fad9e72
+      internalID: -332662224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FIRE_ONLY] Assault_rifle_V1.00_4'
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 32
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d9cfa3bdec2e744f95b606a75529098
+      internalID: 517662922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FIRE_ONLY] Assault_rifle_V1.00_5'
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 22
+        width: 17
+        height: 13
+      alignment: 9
+      pivot: {x: 0.5, y: 0.528347}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a4b2d65c252bba48b3ad8571e11bb32
+      internalID: 558098997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FIRE_ONLY] Assault_rifle_V1.00_6'
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 47
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2291b34a91273c94a8c3258cd0804cc9
+      internalID: 1487161956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FIRE_ONLY] Assault_rifle_V1.00_7'
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 24
+        width: 23
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b12333e4ef47064fbecc7f2430c6e37
+      internalID: 829274530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FIRE_ONLY] Assault_rifle_V1.00_8'
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 18
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7b4675ec294d1343ad4146823d71944
+      internalID: -1000035978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FIRE_ONLY] Assault_rifle_V1.00_9'
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 29
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a31a7086f3ca0e64d81100db7820009b
+      internalID: -408611949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -138,7 +348,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[FIRE_ONLY] Assault_rifle_V1.00_0': -712211272
+      '[FIRE_ONLY] Assault_rifle_V1.00_1': -2117253384
+      '[FIRE_ONLY] Assault_rifle_V1.00_2': 968019450
+      '[FIRE_ONLY] Assault_rifle_V1.00_3': -332662224
+      '[FIRE_ONLY] Assault_rifle_V1.00_4': 517662922
+      '[FIRE_ONLY] Assault_rifle_V1.00_5': 558098997
+      '[FIRE_ONLY] Assault_rifle_V1.00_6': 1487161956
+      '[FIRE_ONLY] Assault_rifle_V1.00_7': 829274530
+      '[FIRE_ONLY] Assault_rifle_V1.00_8': -1000035978
+      '[FIRE_ONLY] Assault_rifle_V1.00_9': -408611949
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
