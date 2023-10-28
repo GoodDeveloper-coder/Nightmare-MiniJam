@@ -9,6 +9,7 @@ public class Room : MonoBehaviour
     [SerializeField] private GameObject[] enemyPrefabs;
 
     private GameObject[] enemies;
+    private bool clear;
 
     // Start is called before the first frame update
     void Start()
@@ -25,10 +26,21 @@ public class Room : MonoBehaviour
     public void GenerateEnemies(int roomIndex)
     {
         
+        clear = false;
     }
 
-    public void EnemyDown(GameObject enemy)
+    public void EnemyKilled(GameObject enemy)
     {
-        for (int i = 0; i < enemies.Length; i++) if (enemy == enemies[i]) enemies[i] = null;
+        clear = true;
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            if (enemy == enemies[i]) enemies[i] = null;
+            else if (enemies[i] != null) clear = false;
+        }
+    }
+
+    public bool GetClear()
+    {
+        return clear;
     }
 }

@@ -250,6 +250,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8255640797230979164, guid: 0a20a7d29352b894281058f5884fc822, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a20a7d29352b894281058f5884fc822, type: 3}
 --- !u!114 &171731388 stripped
@@ -1274,6 +1278,7 @@ GameObject:
   - component: {fileID: 632432962}
   - component: {fileID: 632432961}
   - component: {fileID: 632432960}
+  - component: {fileID: 632432964}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1363,6 +1368,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &632432964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632432959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4baf662d5eeaac841b809e6d8030413c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &657865456
 GameObject:
   m_ObjectHideFlags: 0
@@ -3037,10 +3054,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a01a4bfc2fb2947b574bfc4a1be61b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upgradeMenu: {fileID: 0}
   player: {fileID: 2137222720}
   colossal: {fileID: 271173260}
-  rooms: []
-  newRoomTrigger: {fileID: 0}
+  roomPrefab: {fileID: 0}
   previousRoom: {fileID: 171731388}
   currentRoom: {fileID: 963935043}
   nextRoom: {fileID: 673294775}
@@ -3211,4 +3228,5 @@ MonoBehaviour:
   movementSpeedUpgrade: 0
   immobilityDuration: 0
   immobilityUpgrade: 0
+  room: {fileID: 0}
   input: {x: 0, y: 0}

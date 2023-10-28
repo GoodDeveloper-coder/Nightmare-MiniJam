@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class GameplayManager : MonoBehaviour
 {
+    [SerializeField] private UpgradeMenu upgradeMenu;
+
     [SerializeField] Player player;
     [SerializeField] ColossalEnemy colossal;
-    [SerializeField] private string[] rooms;
 
-    [SerializeField] private GameObject newRoomTrigger;
+    [SerializeField] private GameObject roomPrefab;
 
     [SerializeField] private Room previousRoom;
     [SerializeField] private Room currentRoom;
@@ -20,7 +21,8 @@ public class GameplayManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentRoom.GenerateEnemies(0);
+        nextRoom.GenerateEnemies(1);
     }
 
     // Update is called once per frame
@@ -33,9 +35,12 @@ public class GameplayManager : MonoBehaviour
     {
         Transform cam = Camera.main.transform;
         cam.position = new Vector3(player.transform.position.x, cam.position.y, cam.position.z);
-        if (!player.GetNewRoomTrigger()) return;
-        // generate new room
-        newRoomTrigger.transform.position += Vector3.right * 20;
+        if (!currentRoom.GetClear()) return;
+        roomsCleared++;
+        previousRoom = currentRoom;
+        currentRoom = nextRoom;
+        nextRoom = Instantiate(roomPrefab, transform.position = Vector3.right * 15, transform.rotation).GetComponent<Room>();
+        nextRoom.GenerateEnemies(roomsCleared);
     }
 
     public Player GetPlayer()
