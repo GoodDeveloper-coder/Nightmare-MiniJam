@@ -26,4 +26,9 @@ public class Room : MonoBehaviour
     {
         
     }
+
+    public void EnemyDown(GameObject enemy)
+    {
+        for (int i = 0; i < enemies.Length; i++) if (enemy == enemies[i]) enemies[i] = null;
+    }
 }

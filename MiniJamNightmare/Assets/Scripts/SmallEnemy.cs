@@ -13,6 +13,8 @@ public class SmallEnemy : MonoBehaviour
     [SerializeField] private float movementSpeed;
     [SerializeField] private float health;
 
+    [SerializeField] private Room room;
+
     private bool active;
 
     // Start is called before the first frame update
@@ -34,5 +36,10 @@ public class SmallEnemy : MonoBehaviour
         Vector3 distance = player.transform.position - transform.position;
         if (Mathf.Abs(distance.x) < Mathf.Abs(distance.y)) rb.MovePosition(rb.position + new Vector2((distance.x < 0 ? -1 : 1) *  movementSpeed * Time.deltaTime, 0));
         else rb.MovePosition(rb.position + new Vector2(0, (distance.y < 0 ? -1 : 1) * movementSpeed * Time.deltaTime));
+    }
+
+    public void SetRoom(Room r)
+    {
+        room = r;
     }
 }
