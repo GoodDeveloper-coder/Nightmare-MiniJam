@@ -4,19 +4,30 @@ using UnityEngine;
 
 public class SpawnEnemy : MonoBehaviour
 {
-    [SerializeField]  GameObject[] _spawnPoints;
+    public static SpawnEnemy Instance;
+
+    [SerializeField]  Transform[] _spawnPostion;
     int _randomPos;
+    float _timeSpawn=1f;
+    string _typeEnemy="Monster";
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
+    private void Awake() => Instance = this; 
+    
+    void Start() => StartCoroutine(Spawn());
 
     IEnumerator Spawn()
     {
-        _randomPos = Random.RandomRange(0, _spawnPoints.Length);
+        yield return new WaitForSeconds(_timeSpawn);
+        while (true)
+        {
+            _randomPos = Random.RandomRange(0, _spawnPostion.Length);
+            Instantiate(Resources.Load(_typeEnemy), _spawnPostion[_randomPos].position,Quaternion.identity);
+            yield return new WaitForSeconds(_timeSpawn);
+        }
         
-
-        yield return new WaitForSeconds(2);
     }
+
+    public void SetTimeSpawn(float time) => _timeSpawn = time;
+    public void SetTimeSpawn(string enemy) => _typeEnemy = enemy;
 }

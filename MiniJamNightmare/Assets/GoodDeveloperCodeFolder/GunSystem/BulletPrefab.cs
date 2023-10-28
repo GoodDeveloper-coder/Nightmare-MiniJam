@@ -11,10 +11,12 @@ public class BulletPrefab : MonoBehaviour
     public GameObject bloodSplash;
     public LayerMask layerMask;
 
+    public float TimeAfterDisappearBullet = 6f;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(DestroyBullet());
     }
 
     // Update is called once per frame
@@ -26,22 +28,35 @@ public class BulletPrefab : MonoBehaviour
             if (other.collider.CompareTag("Enemy"))
             {
                 other.collider.GetComponent<Enemy>().TakeDamage(damage);
-                Destroy();
+                DestroyEnemy();
             }
 
             if (other.collider.CompareTag("Ground"))
             {
-                Destroy();
+                DestroyGround();
             }
         }
 
-        transform.Translate(Vector2.up * speed * Time.deltaTime);
+        transform.Translate(Vector2.right * speed * Time.deltaTime);
     }
 
-    void Destroy()
+    void DestroyEnemy()
     {
-        Instantiate(destroyEffect, transform.position, Quaternion.identity);
+        //Instantiate(destroyEffect, transform.position, Quaternion.identity);
         Instantiate(bloodSplash, transform.position, Quaternion.identity);
         Destroy(gameObject);
+    }
+
+    void DestroyGround()
+    {
+        Instantiate(destroyEffect, transform.position, Quaternion.identity);
+        //Instantiate(bloodSplash, transform.position, Quaternion.identity);
+        Destroy(gameObject);
+    }
+
+    IEnumerator DestroyBullet()
+    {
+        yield return new WaitForSeconds(TimeAfterDisappearBullet);
+        Destroy(this.gameObject);
     }
 }
