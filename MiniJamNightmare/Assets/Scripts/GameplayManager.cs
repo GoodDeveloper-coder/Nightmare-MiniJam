@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class GameplayManager : MonoBehaviour
 {
+    [SerializeField] private GameObject hUD;
     [SerializeField] private UpgradeMenu upgradeMenu;
 
-    [SerializeField] Player player;
+    [SerializeField] PlayerScript player;
     [SerializeField] ColossalEnemy colossal;
 
     [SerializeField] private GameObject roomPrefab;
@@ -38,20 +39,29 @@ public class GameplayManager : MonoBehaviour
         cam.position = new Vector3(player.transform.position.x, cam.position.y, cam.position.z);
         if (clear || !currentRoom.GetClear()) return;
         clear = true;
+        NextRoom();
+    }
+
+    private void NextRoom()
+    {
         roomsCleared++;
-        upgradeMenu.Activate(roomsCleared);
+        hUD.SetActive(false);
+        upgradeMenu.Activate();
         previousRoom = currentRoom;
         currentRoom = nextRoom;
-        nextRoom = Instantiate(roomPrefab, transform.position = Vector3.right * 15, transform.rotation).GetComponent<Room>();
+        player.SetRoom(currentRoom);
+        nextRoom = Instantiate(roomPrefab, transform.position = Vector3.right * 30, transform.rotation).GetComponent<Room>();
         nextRoom.GenerateEnemies(roomsCleared);
+        colossal.SpeedUp();
     }
 
     public void Upgrade(int upgrade)
     {
         clear = false;
+        hUD.SetActive(true);
     }
 
-    public Player GetPlayer()
+    public PlayerScript GetPlayer()
     {
         return player;
     }
