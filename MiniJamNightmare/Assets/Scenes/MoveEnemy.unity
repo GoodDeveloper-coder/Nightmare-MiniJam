@@ -1086,7 +1086,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 757764255}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 979ea70531cc26344b24889cc9292716, type: 3}
   m_Name: 
@@ -1426,7 +1426,7 @@ MonoBehaviour:
   _image: {fileID: 433211003}
   _currentSpawn: 0
   _maxSpawn: 100
-  _speed: 0
+  _speed: 10
 --- !u!1 &1098075489
 GameObject:
   m_ObjectHideFlags: 0
@@ -2882,7 +2882,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3791a13f3a7512e46942c5a5563dad70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _target: {fileID: 1373265382}
   _speed: 2
 --- !u!95 &2099369760
 Animator:

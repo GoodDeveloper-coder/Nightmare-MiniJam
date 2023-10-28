@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class EnemyMove : MonoBehaviour
 {
-    [SerializeField] Transform _target;
+    Transform _target;
     [SerializeField] float _speed;
 
+    private void Start()
+    {
+        _target = GameObject.Find("Player").transform;
+    }
     // Update is called once per frame
     void Update()
     {
