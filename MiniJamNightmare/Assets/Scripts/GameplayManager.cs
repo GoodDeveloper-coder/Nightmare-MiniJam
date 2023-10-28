@@ -17,6 +17,7 @@ public class GameplayManager : MonoBehaviour
 
     private int score;
     private int roomsCleared;
+    private bool clear;
 
     // Start is called before the first frame update
     void Start()
@@ -35,12 +36,19 @@ public class GameplayManager : MonoBehaviour
     {
         Transform cam = Camera.main.transform;
         cam.position = new Vector3(player.transform.position.x, cam.position.y, cam.position.z);
-        if (!currentRoom.GetClear()) return;
+        if (clear || !currentRoom.GetClear()) return;
+        clear = true;
         roomsCleared++;
+        upgradeMenu.Activate(roomsCleared);
         previousRoom = currentRoom;
         currentRoom = nextRoom;
         nextRoom = Instantiate(roomPrefab, transform.position = Vector3.right * 15, transform.rotation).GetComponent<Room>();
         nextRoom.GenerateEnemies(roomsCleared);
+    }
+
+    public void Upgrade(int upgrade)
+    {
+        clear = false;
     }
 
     public Player GetPlayer()
