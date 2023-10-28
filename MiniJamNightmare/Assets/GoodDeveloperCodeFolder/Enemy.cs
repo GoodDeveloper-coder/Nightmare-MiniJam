@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour
         {
             Instantiate(destroyEffect, transform.position, Quaternion.identity);
             Instantiate(bloodSplash, transform.position, Quaternion.identity);
+            Instantiate(Resources.Load("Coin"), transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
