@@ -8,6 +8,8 @@ public class GameplayManager : MonoBehaviour
     [SerializeField] ColossalEnemy colossal;
     [SerializeField] private string[] rooms;
 
+    [SerializeField] private GameObject newRoomTrigger;
+
     [SerializeField] private Room previousRoom;
     [SerializeField] private Room currentRoom;
     [SerializeField] private Room nextRoom;
@@ -25,5 +27,19 @@ public class GameplayManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void FixedUpdate()
+    {
+        Transform cam = Camera.main.transform;
+        cam.position = new Vector3(player.transform.position.x, cam.position.y, cam.position.z);
+        if (!player.GetNewRoomTrigger()) return;
+        // generate new room
+        newRoomTrigger.transform.position += Vector3.right * 20;
+    }
+
+    public Player GetPlayer()
+    {
+        return player;
     }
 }

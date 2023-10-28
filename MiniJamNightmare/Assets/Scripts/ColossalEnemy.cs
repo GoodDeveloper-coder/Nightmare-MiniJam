@@ -11,6 +11,8 @@ public class ColossalEnemy : MonoBehaviour
     [SerializeField] private float initialMovementSpeed;
     [SerializeField] private float movementSpeedIncrement;
 
+    private float currentMovementSpeed;
+
     private bool active;
 
     // Start is called before the first frame update
@@ -29,7 +31,7 @@ public class ColossalEnemy : MonoBehaviour
     void FixedUpdate()
     {
         if (!active) return;
-
+        rb.MovePosition(rb.position + Vector2.right * currentMovementSpeed * Time.deltaTime);
     }
 
     public void SetActive(bool a)

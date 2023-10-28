@@ -5,15 +5,10 @@ using UnityEngine;
 public class Room : MonoBehaviour
 {
     [SerializeField] private GameplayManager gameManager;
-
-    [SerializeField] private GameObject wallPrefab;
-    [SerializeField] private GameObject floorPrefab;
-    [SerializeField] private GameObject upgradePrefab;
+    
     [SerializeField] private GameObject[] enemyPrefabs;
 
-    private GameObject[] elements;
-
-    private bool entered;
+    private GameObject[] enemies;
 
     // Start is called before the first frame update
     void Start()
@@ -27,12 +22,8 @@ public class Room : MonoBehaviour
         
     }
 
-    public void GenerateRoom()
+    public void GenerateEnemies(int roomIndex)
     {
-        if (elements != null)
-        {
-            foreach (GameObject e in elements) Destroy(e);
-        }
-
+        
     }
 }
