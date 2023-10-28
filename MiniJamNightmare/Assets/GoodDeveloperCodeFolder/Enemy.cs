@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             Instantiate(destroyEffect, transform.position, Quaternion.identity);
-            //Instantiate(bloodSplash, transform.position, Quaternion.identity);
+            Instantiate(bloodSplash, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
