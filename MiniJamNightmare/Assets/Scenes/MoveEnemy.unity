@@ -206,6 +206,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 38858212702407130, guid: f9ea6b025c29afc42958907044ec960e, type: 3}
+      propertyPath: _radiusVision
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 824292976528609417, guid: f9ea6b025c29afc42958907044ec960e, type: 3}
       propertyPath: m_Name
       value: Enemy 1
@@ -530,7 +534,6 @@ MonoBehaviour:
   destroyEffect: {fileID: 1119044058240589691, guid: 9a3a90c491698784ba437619860d74a9, type: 3}
   bloodSplash: {fileID: 6783836589316717286, guid: 51c0ed800525b5d40b610f2758468734, type: 3}
   room: {fileID: 0}
-  initialHealth: 0
 --- !u!1001 &262982295
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -538,6 +541,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3102206066350134477, guid: 25551aa5afaa27145aeafa8288164260, type: 3}
+      propertyPath: _radiusVision
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8599235622154286855, guid: 25551aa5afaa27145aeafa8288164260, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1825,8 +1832,10 @@ MonoBehaviour:
   bullet: {fileID: 975233356380039018, guid: 71fc1a928189b1840bf5ed306029884f, type: 3}
   point: {fileID: 1483021644}
   animator: {fileID: 1379425266}
+  MaxGunAmmo: 30
   GunAmmo: 30
   AmmoText: {fileID: 1466170722}
+  AudioSource: {fileID: 0}
 --- !u!212 &960259315
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2753,6 +2762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3284a8db81e875a47b61d43f160c2756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 3
 --- !u!50 &1373265384
 Rigidbody2D:
   serializedVersion: 4
@@ -3286,6 +3296,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7744584805286477132, guid: 449d062ae90decc48b09e81b4e418d4c, type: 3}
+      propertyPath: _radiusVision
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8268683450149952083, guid: 449d062ae90decc48b09e81b4e418d4c, type: 3}
       propertyPath: m_Name
       value: Enemy 2
@@ -3771,19 +3785,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 824292976528609417, guid: f9ea6b025c29afc42958907044ec960e, type: 3}
   m_PrefabInstance: {fileID: 56990020}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2099369754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2099369753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3791a13f3a7512e46942c5a5563dad70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 2
 --- !u!95 &2099369760
 Animator:
   serializedVersion: 5

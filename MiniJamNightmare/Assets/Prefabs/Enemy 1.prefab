@@ -151,7 +151,6 @@ MonoBehaviour:
   destroyEffect: {fileID: 1119044058240589691, guid: 9a3a90c491698784ba437619860d74a9, type: 3}
   bloodSplash: {fileID: 6783836589316717286, guid: 51c0ed800525b5d40b610f2758468734, type: 3}
   room: {fileID: 0}
-  initialHealth: 10
 --- !u!114 &38858212702407130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,3 +164,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 2
+  _radiusVision: 3
