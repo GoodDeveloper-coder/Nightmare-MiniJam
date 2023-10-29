@@ -6,7 +6,7 @@ public class BulletPrefab : MonoBehaviour
 {
     public float speed;
     public float distance;
-    public int damage;
+    public float damage;
     public GameObject destroyEffect;
     public GameObject bloodSplash;
     public LayerMask layerMask;

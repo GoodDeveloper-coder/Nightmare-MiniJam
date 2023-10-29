@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    Animator _anim; 
+    [SerializeField] private Animator _anim; 
 
-    public int health;
+    public float health;
     public GameObject destroyEffect;
     public GameObject bloodSplash;
 
@@ -21,22 +21,22 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    public void TakeDamage(int damage)
-    {
-        health -= damage;
         if (health <= 0)
         {
+            GetComponent<EnemyMove>().Deactivate();
             room.EnemyKilled(gameObject);
 
             Instantiate(destroyEffect, transform.position, Quaternion.identity);
             Instantiate(destroyEffect, transform.position, Quaternion.identity);
             Instantiate(Resources.Load("Coin"), transform.position, Quaternion.identity);
-            //_anim.SetTrigger("death");
+            _anim.SetTrigger("death");
             Destroy(gameObject, 1f);
         }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
     }
 
     private void Die()

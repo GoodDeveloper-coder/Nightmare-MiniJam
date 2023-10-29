@@ -202,6 +202,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 1.25
+  _anim: {fileID: 7612010821299577404}
+  animationSpeedFactor: 0.2
   minOrbInterval: 4
   maxOrbInterval: 6
   orbPrefab: {fileID: 343550282028440582, guid: 28128e678337d2241bbfbe1a83ef4d7b, type: 3}
@@ -217,6 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 762239b66cb218448984c1a15f25cf81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _anim: {fileID: 7612010821299577404}
   health: 100
   destroyEffect: {fileID: 1119044058240589691, guid: 9a3a90c491698784ba437619860d74a9, type: 3}
   bloodSplash: {fileID: 6783836589316717286, guid: 51c0ed800525b5d40b610f2758468734, type: 3}

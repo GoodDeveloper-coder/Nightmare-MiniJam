@@ -10,8 +10,12 @@ public class ColossalEnemy : MonoBehaviour
 
     [SerializeField] private Rigidbody2D rb;
 
+    [SerializeField] private Animator _anim;
+
     [SerializeField] private float initialMovementSpeed = 1f;
     [SerializeField] private float movementSpeedIncrement = 0.1f;
+
+    [SerializeField] private float animationSpeedFactor = 0.5f;
 
     private float currentMovementSpeed;
 
@@ -25,12 +29,13 @@ public class ColossalEnemy : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         currentMovementSpeed = initialMovementSpeed;
         StartCoroutine(FootStepsSound());
+        _anim.speed = initialMovementSpeed * animationSpeedFactor;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void FixedUpdate()
@@ -57,11 +62,12 @@ public class ColossalEnemy : MonoBehaviour
     public void SpeedUp()
     {
         currentMovementSpeed += movementSpeedIncrement;
+        _anim.speed = currentMovementSpeed * animationSpeedFactor;
     }
 
     IEnumerator FootStepsSound()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(3f * initialMovementSpeed / currentMovementSpeed);
         AudioSourceFootSteps.Play();
         StartCoroutine(FootStepsSound());
     }
