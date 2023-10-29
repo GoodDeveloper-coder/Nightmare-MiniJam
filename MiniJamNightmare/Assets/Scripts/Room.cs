@@ -145,7 +145,7 @@ public class Room : MonoBehaviour
             while (matchX || matchY);
             x[i] = rX;
             y[i] = rY;
-            enemies[i].transform.position += offset + Vector3.right * (10f / 3f) + (Vector3.right * (rX + 0.5f - enemies.Length / 2f) * 12.5f + Vector3.up * (rY + 0.5f - enemies.Length / 2f) * 7.5f) / enemies.Length;
+            enemies[i].transform.position += Vector3.right * (10f / 3f) + (Vector3.right * (rX + 0.5f - enemies.Length / 2f) * 12.5f + Vector3.up * (rY + 0.5f - enemies.Length / 2f) * 7.5f) / enemies.Length;
             enemies[i].GetComponent<Enemy>().SetRoom(this);
         }
         clear = false;
