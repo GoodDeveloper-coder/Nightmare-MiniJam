@@ -29,7 +29,8 @@ public class Enemy : MonoBehaviour
             room.EnemyKilled(gameObject);
 
             Instantiate(destroyEffect, transform.position, Quaternion.identity);
-            Instantiate(bloodSplash, transform.position, Quaternion.identity);
+            Instantiate(destroyEffect, transform.position, Quaternion.identity);
+            Instantiate(Resources.Load("Coin"), transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

@@ -61,7 +61,7 @@ public class PlayerScript : MonoBehaviour
     {
         if (collision.transform.tag == "Enemy")
         {
-            PlayerHP -= 1f / defense;
+            PlayerHP -= Time.deltaTime / defense;
         }
     }
 

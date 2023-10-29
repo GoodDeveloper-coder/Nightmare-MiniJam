@@ -5,13 +5,15 @@ using TMPro;
 
 public class CollectCoin : MonoBehaviour
 {
- 
+    ScorePoints _score;
 
     [SerializeField] float _speed;
      Transform _player;
     [SerializeField]float limitDistance;
+
+    public int points = 20;
     // Start is called before the first frame update
-    private void Start() =>_player = GameObject.Find("Player").transform;
+    private void Start() { _player = GameObject.Find("Player").transform; _score = ScorePoints.Instance; }
 
     
 
@@ -27,7 +29,7 @@ public class CollectCoin : MonoBehaviour
     {
         if(collision.name== "Player")
         {
-            GameObject.Find("Score").GetComponent<ScorePoints>().AddCoin(20);
+            _score.AddCoin(points);
             Destroy(gameObject);
         }
     }
