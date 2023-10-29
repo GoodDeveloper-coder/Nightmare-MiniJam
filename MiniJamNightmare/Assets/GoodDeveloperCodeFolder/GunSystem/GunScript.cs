@@ -14,7 +14,8 @@ public class GunScript : MonoBehaviour
 
     public Animator animator;
 
-    [SerializeField] private int GunAmmo = 30;
+    public int MaxGunAmmo = 30;
+    public int GunAmmo = 30;
 
     public TextMeshProUGUI AmmoText;
 
@@ -23,7 +24,7 @@ public class GunScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GunAmmo = MaxGunAmmo;
     }
 
     // Update is called once per frame
@@ -52,7 +53,7 @@ public class GunScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            GunAmmo = 30;
+            GunAmmo = MaxGunAmmo;
         }
     }
 }

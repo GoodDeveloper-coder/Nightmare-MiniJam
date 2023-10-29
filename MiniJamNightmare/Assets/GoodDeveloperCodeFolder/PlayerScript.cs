@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour
 {
-    [SerializeField] float PlayerHP = 10;
+    public float PlayerHP = 1f;
     public Scrollbar ScrollbarPlayerHP;
     public GameObject DeathMenu;
     bool FixTime = true;
@@ -32,6 +32,8 @@ public class PlayerScript : MonoBehaviour
     private float defense;
     private float maxAmmo;
     private float ammo;
+
+    public float PlayerTakeEnemyDamage = 0.1f;
 
     // Start is called before the first frame update
     void Start()
@@ -61,7 +63,7 @@ public class PlayerScript : MonoBehaviour
     {
         if (collision.transform.tag == "Enemy")
         {
-            PlayerHP -= Time.deltaTime / defense;
+            PlayerHP -= PlayerTakeEnemyDamage;
         }
     }
 

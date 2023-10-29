@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 direction;
     private Rigidbody2D rb;
     
-    private float speed;
+    public float speed = 3f;
 
     // Start is called before the first frame update
     void Start()
