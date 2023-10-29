@@ -2507,7 +2507,7 @@ MonoBehaviour:
   explosionPrefab: {fileID: 1119044058240589691, guid: 9a3a90c491698784ba437619860d74a9, type: 3}
   rb: {fileID: 0}
   initialMovementSpeed: 1
-  movementSpeedIncrement: 0
+  movementSpeedIncrement: 0.1
   AudioSourceFootSteps: {fileID: 271173261}
 --- !u!82 &271173261
 AudioSource:
