@@ -4,21 +4,28 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float health;
+    Animator _anim; 
+
+    public int health;
     public GameObject destroyEffect;
     public GameObject bloodSplash;
 
     [SerializeField] private Room room;
-    
+
+    [SerializeField] private float initialHealth;
+
+    private bool active;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        _anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!active) return;
         if (health <= 0)
         {
             room.EnemyKilled(gameObject);
@@ -26,7 +33,8 @@ public class Enemy : MonoBehaviour
             Instantiate(destroyEffect, transform.position, Quaternion.identity);
             Instantiate(destroyEffect, transform.position, Quaternion.identity);
             Instantiate(Resources.Load("Coin"), transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            _anim.SetTrigger("death");
+            Destroy(gameObject,1f);
         }
     }
 
@@ -43,5 +51,11 @@ public class Enemy : MonoBehaviour
     public void SetRoom(Room r)
     {
         room = r;
+    }
+
+    public void Activate(PlayerScript p)
+    {
+        active = true;
+        //player = p;
     }
 }
