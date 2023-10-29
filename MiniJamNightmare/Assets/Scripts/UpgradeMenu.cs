@@ -45,4 +45,34 @@ public class UpgradeMenu : MonoBehaviour
         foreach (GameObject u in upgrades) u.SetActive(false);
         gameManager.Upgrade(upgrade);
     }
+
+    public void SpeedUpUpgrade(PlayerMovement PlayerMovementScript)
+    {
+        PlayerMovementScript.speed += PlayerMovementScript.speed / 10;
+    }
+
+    public void FasterFireRateUpUpgrade(GunScript GunScript)
+    {
+        GunScript.startTime -= GunScript.startTime / 10;
+    }
+
+    public void FullRecoveryUpgrade(PlayerScript playerScript)
+    {
+        playerScript.PlayerHP = 1f;
+    }
+
+    public void DamageUpUpgrade(BulletPrefab BulletPrefabScript)
+    {
+        BulletPrefabScript.damage += BulletPrefabScript.damage / 10;
+    }
+
+    public void MaxAmmoUpgradeScript(GunScript GunScript)
+    {
+        GunScript.MaxGunAmmo += 3;
+    }
+
+    public void DefenseUpgrade(PlayerScript PlayerScript)
+    {
+        PlayerScript.PlayerTakeEnemyDamage -= 0.01f;
+    }
 }
