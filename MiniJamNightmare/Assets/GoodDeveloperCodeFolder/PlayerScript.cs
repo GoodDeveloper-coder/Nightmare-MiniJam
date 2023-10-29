@@ -98,35 +98,4 @@ public class PlayerScript : MonoBehaviour
     {
         room = r;
     }
-
-    private void Upgrade(int upgrade)
-    {
-        switch (upgrade)
-        {
-            case 0:
-                // walking speed up
-                movementSpeed += movementSpeedUpgrade;
-                break;
-            case 1:
-                // faster fire
-                fireRate += fireRateUpgrade;
-                break;
-            case 2:
-                // full recovery
-                currentHP = maxHP;
-                break;
-            case 3:
-                // damage up
-                offense += offenseUpgrade;
-                break;
-            case 4:
-                // ammo up
-                maxAmmo += maxAmmoUpgrade;
-                break;
-            case 5:
-                // defense up
-                defense += defenseUpgrade;
-                break;
-        }
-    }
 }

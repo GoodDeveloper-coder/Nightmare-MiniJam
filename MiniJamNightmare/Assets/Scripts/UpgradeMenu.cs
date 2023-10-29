@@ -53,7 +53,7 @@ public class UpgradeMenu : MonoBehaviour
 
     public void FasterFireRateUpUpgrade(GunScript GunScript)
     {
-        GunScript.startTime -= GunScript.startTime / 10;
+        GunScript.startTime /= 1.1f;
     }
 
     public void FullRecoveryUpgrade(PlayerScript playerScript)
@@ -73,6 +73,6 @@ public class UpgradeMenu : MonoBehaviour
 
     public void DefenseUpgrade(PlayerScript PlayerScript)
     {
-        PlayerScript.PlayerTakeEnemyDamage -= 0.01f;
+        PlayerScript.PlayerTakeEnemyDamage /= 1.1f;
     }
 }
