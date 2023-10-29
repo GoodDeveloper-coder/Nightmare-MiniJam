@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2937099471284693624}
   - component: {fileID: 3952978150726004651}
   - component: {fileID: -408909709605806826}
+  - component: {fileID: 3102206066350134477}
   m_Layer: 7
   m_Name: Enemy 3
   m_TagString: Enemy
@@ -107,7 +108,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &3952978150726004651
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -151,3 +152,16 @@ MonoBehaviour:
   bloodSplash: {fileID: 6783836589316717286, guid: 51c0ed800525b5d40b610f2758468734, type: 3}
   room: {fileID: 0}
   initialHealth: 20
+--- !u!114 &3102206066350134477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8716142526439802609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3791a13f3a7512e46942c5a5563dad70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 2

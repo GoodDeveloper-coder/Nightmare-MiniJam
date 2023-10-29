@@ -25,16 +25,20 @@ public class BulletPrefab : MonoBehaviour
         RaycastHit2D other = Physics2D.Raycast(transform.position, transform.up, distance, layerMask);
         if (other.collider != null)
         {
-            if (other.collider.CompareTag("Enemy"))
-            {
-                other.collider.GetComponent<Enemy>().TakeDamage(damage);
-                DestroyEnemy();
-            }
+            //if (other.collider.isTrigger == false)
+            //{
+                if (other.collider.CompareTag("Enemy"))
+                {
+                    other.collider.GetComponent<Enemy>().TakeDamage(damage);
+                    DestroyEnemy();
+                }
 
-            if (other.collider.CompareTag("Ground"))
-            {
-                DestroyGround();
-            }
+                if (other.collider.CompareTag("Ground"))
+                {
+                    DestroyGround();
+                }
+            //}
+
         }
 
         transform.Translate(Vector2.right * speed * Time.deltaTime);

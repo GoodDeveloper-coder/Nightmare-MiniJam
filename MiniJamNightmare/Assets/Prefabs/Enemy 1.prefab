@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 824292976528609421}
   - component: {fileID: 824292976528609422}
   - component: {fileID: 8467752860667626704}
+  - component: {fileID: 38858212702407130}
+  - component: {fileID: -4618359973793440984}
   m_Layer: 7
   m_Name: Enemy 1
   m_TagString: Enemy
@@ -107,7 +109,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &824292976528609422
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -121,7 +123,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.019999998, y: 0.15}
+  m_Offset: {x: -0.01927501, y: 0.14782503}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.625, y: 0}
@@ -132,7 +134,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.3}
+  m_Size: {x: 0.17304981, y: 0.31594974}
   m_EdgeRadius: 0
 --- !u!114 &8467752860667626704
 MonoBehaviour:
@@ -151,3 +153,32 @@ MonoBehaviour:
   bloodSplash: {fileID: 6783836589316717286, guid: 51c0ed800525b5d40b610f2758468734, type: 3}
   room: {fileID: 0}
   initialHealth: 10
+--- !u!114 &38858212702407130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824292976528609417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3791a13f3a7512e46942c5a5563dad70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 2
+--- !u!58 &-4618359973793440984
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824292976528609417}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.013496757, y: 0.15000008}
+  serializedVersion: 2
+  m_Radius: 0.39265674
