@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class GameplayManager : MonoBehaviour
 {
-    [SerializeField] Player player;
-    [SerializeField] ColossalEnemy colossal;
-    [SerializeField] private string[] rooms;
+    [SerializeField] private GameObject hUD;
+    [SerializeField] private UpgradeMenu upgradeMenu;
 
-    [SerializeField] private GameObject newRoomTrigger;
+    [SerializeField] PlayerScript player;
+    [SerializeField] ColossalEnemy colossal;
+
+    [SerializeField] private GameObject roomPrefab;
 
     [SerializeField] private Room previousRoom;
     [SerializeField] private Room currentRoom;
@@ -16,11 +18,14 @@ public class GameplayManager : MonoBehaviour
 
     private int score;
     private int roomsCleared;
+    private bool clear;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentRoom.GenerateEnemies(0);
+        nextRoom.GenerateEnemies(1);
+        player.SetRoom(currentRoom);
     }
 
     // Update is called once per frame
@@ -33,12 +38,31 @@ public class GameplayManager : MonoBehaviour
     {
         Transform cam = Camera.main.transform;
         cam.position = new Vector3(player.transform.position.x, cam.position.y, cam.position.z);
-        if (!player.GetNewRoomTrigger()) return;
-        // generate new room
-        newRoomTrigger.transform.position += Vector3.right * 20;
+        if (clear || !currentRoom.GetClear()) return;
+        clear = true;
+        NextRoom();
     }
 
-    public Player GetPlayer()
+    private void NextRoom()
+    {
+        roomsCleared++;
+        hUD.SetActive(false);
+        upgradeMenu.Activate();
+        previousRoom = currentRoom;
+        currentRoom = nextRoom;
+        player.SetRoom(currentRoom);
+        nextRoom = Instantiate(roomPrefab, currentRoom.transform.position + Vector3.right * 30, transform.rotation).GetComponent<Room>();
+        nextRoom.GenerateEnemies(roomsCleared);
+        colossal.SpeedUp();
+    }
+
+    public void Upgrade(int upgrade)
+    {
+        clear = false;
+        hUD.SetActive(true);
+    }
+
+    public PlayerScript GetPlayer()
     {
         return player;
     }

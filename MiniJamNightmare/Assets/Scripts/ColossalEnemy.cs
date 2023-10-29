@@ -6,6 +6,8 @@ public class ColossalEnemy : MonoBehaviour
 {
     [SerializeField] private GameplayManager gameManager;
 
+    [SerializeField] private GameObject explosionPrefab;
+
     [SerializeField] private Rigidbody2D rb;
 
     [SerializeField] private float initialMovementSpeed;
@@ -19,7 +21,7 @@ public class ColossalEnemy : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        active = false;
+        currentMovementSpeed = initialMovementSpeed;
     }
 
     // Update is called once per frame
@@ -30,12 +32,27 @@ public class ColossalEnemy : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!active) return;
+        //if (!active) return;
         rb.MovePosition(rb.position + Vector2.right * currentMovementSpeed * Time.deltaTime);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.transform.tag == "Ground")
+        {
+            Destroy(other.transform.gameObject);
+            for (int i = 0; i < 7; i++) Instantiate(explosionPrefab, other.transform.position + Vector3.up * (0.5f + i - 3.5f), transform.rotation);
+            return;
+        }
     }
 
     public void SetActive(bool a)
     {
         active = a;
+    }
+
+    public void SpeedUp()
+    {
+        currentMovementSpeed += movementSpeedIncrement;
     }
 }

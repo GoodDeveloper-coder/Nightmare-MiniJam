@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed;
+    //public float speed;
     private Vector2 direction;
     private Rigidbody2D rb;
+    
+    private float speed;
 
     // Start is called before the first frame update
     void Start()
@@ -24,5 +26,10 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime);
+    }
+
+    public void SetSpeed(float s)
+    {
+        speed = s;
     }
 }

@@ -8,6 +8,12 @@ public class Enemy : MonoBehaviour
     public GameObject destroyEffect;
     public GameObject bloodSplash;
 
+    [SerializeField] private Room room;
+
+    [SerializeField] private float initialHealth;
+
+    private bool active;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +23,11 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!active) return;
         if (health <= 0)
         {
+            room.EnemyKilled(gameObject);
+
             Instantiate(destroyEffect, transform.position, Quaternion.identity);
             Instantiate(destroyEffect, transform.position, Quaternion.identity);
             Instantiate(Resources.Load("Coin"), transform.position, Quaternion.identity);
@@ -29,5 +38,21 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+    }
+
+    private void Die()
+    {
+
+    }
+
+    public void SetRoom(Room r)
+    {
+        room = r;
+    }
+
+    public void Activate(PlayerScript p)
+    {
+        active = true;
+        //player = p;
     }
 }

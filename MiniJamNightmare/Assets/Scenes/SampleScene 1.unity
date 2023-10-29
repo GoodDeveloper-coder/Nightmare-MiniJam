@@ -400,6 +400,7 @@ MonoBehaviour:
   health: 100
   destroyEffect: {fileID: 1119044058240589691, guid: 9a3a90c491698784ba437619860d74a9, type: 3}
   bloodSplash: {fileID: 6783836589316717286, guid: 51c0ed800525b5d40b610f2758468734, type: 3}
+  room: {fileID: 0}
 --- !u!1001 &262982295
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1620,7 +1621,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3284a8db81e875a47b61d43f160c2756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
 --- !u!50 &1373265384
 Rigidbody2D:
   serializedVersion: 4
@@ -1686,6 +1686,18 @@ MonoBehaviour:
   PlayerHP: 1
   ScrollbarPlayerHP: {fileID: 1691339168}
   DeathMenu: {fileID: 1991561210}
+  movementScript: {fileID: 0}
+  maxHP: 10
+  initialMovementSpeed: 2.5
+  movementSpeedUpgrade: 0.5
+  initialFireRate: 2.5
+  fireRateUpgrade: 0.5
+  initialOffense: 1
+  offenseUpgrade: 0.2
+  initialDefense: 1
+  defenseUpgrade: 0.2
+  initialMaxAmmo: 30
+  maxAmmoUpgrade: 5
 --- !u!1 &1379425263
 GameObject:
   m_ObjectHideFlags: 0
