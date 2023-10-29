@@ -6,7 +6,7 @@ public class EnemyMove : MonoBehaviour
 {
     Transform _target;
     [SerializeField] float _speed;
-    private bool CanAttack;
+    //private bool CanAttack;
 
     private void Start()
     {
@@ -15,11 +15,11 @@ public class EnemyMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (CanAttack)
-        {
-            DirectionScale();
-            transform.position = Vector2.MoveTowards(transform.position, _target.position, _speed * Time.deltaTime);
-        }
+        //if (CanAttack)
+        //{
+        DirectionScale();
+        transform.position = Vector2.MoveTowards(transform.position, _target.position, _speed * Time.deltaTime);
+        //}
         //DirectionScale();
         //transform.position = Vector2.MoveTowards(transform.position, _target.position, _speed * Time.deltaTime);
     }
@@ -37,7 +37,7 @@ public class EnemyMove : MonoBehaviour
             transform.localScale = _newScale;
         }
     }
-
+    /*
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.name == "Player")
@@ -53,4 +53,5 @@ public class EnemyMove : MonoBehaviour
             CanAttack = false;
         }
     }
+    */
 }

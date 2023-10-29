@@ -529,6 +529,8 @@ MonoBehaviour:
   health: 100
   destroyEffect: {fileID: 1119044058240589691, guid: 9a3a90c491698784ba437619860d74a9, type: 3}
   bloodSplash: {fileID: 6783836589316717286, guid: 51c0ed800525b5d40b610f2758468734, type: 3}
+  room: {fileID: 0}
+  initialHealth: 0
 --- !u!1001 &262982295
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2751,7 +2753,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3284a8db81e875a47b61d43f160c2756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
 --- !u!50 &1373265384
 Rigidbody2D:
   serializedVersion: 4

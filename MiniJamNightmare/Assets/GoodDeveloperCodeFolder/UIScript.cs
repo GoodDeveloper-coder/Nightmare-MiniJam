@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class UIScript : MonoBehaviour
 {
+    //public GameObject PauseMenu;
 
     // Start is called before the first frame update
     void Start()
@@ -22,5 +23,34 @@ public class UIScript : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneIndex);
+    }
+
+    public void Play()
+    {
+        SceneManager.LoadScene(2);
+    }
+
+    public void Pause()
+    {
+        //PauseMenu.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void UnPause()
+    {
+        //PauseMenu.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+    public void GoToMenu()
+    {
+        Time.timeScale = 1f;        
+        SceneManager.LoadScene(0);
+    }
+
+    public void QuitGame()
+    {
+        Time.timeScale = 1f;
+        Application.Quit();
     }
 }
