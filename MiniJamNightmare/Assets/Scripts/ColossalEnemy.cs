@@ -17,11 +17,14 @@ public class ColossalEnemy : MonoBehaviour
 
     private bool active;
 
+    public AudioSource AudioSourceFootSteps;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         currentMovementSpeed = initialMovementSpeed;
+        StartCoroutine(FootStepsSound());
     }
 
     // Update is called once per frame
@@ -54,5 +57,12 @@ public class ColossalEnemy : MonoBehaviour
     public void SpeedUp()
     {
         currentMovementSpeed += movementSpeedIncrement;
+    }
+
+    IEnumerator FootStepsSound()
+    {
+        yield return new WaitForSeconds(3);
+        AudioSourceFootSteps.Play();
+        StartCoroutine(FootStepsSound());
     }
 }

@@ -18,6 +18,8 @@ public class GunScript : MonoBehaviour
 
     public TextMeshProUGUI AmmoText;
 
+    public AudioSource AudioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +39,7 @@ public class GunScript : MonoBehaviour
             if (Input.GetMouseButton(0) && GunAmmo >= 1)
             {
                 GunAmmo -= 1;
+                AudioSource.Play();
                 Instantiate(bullet, point.position, point.transform.rotation);
                 time = startTime;
                 animator.Play("MuzzleFlashAnim");

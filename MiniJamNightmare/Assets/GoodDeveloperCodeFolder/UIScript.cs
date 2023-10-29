@@ -30,15 +30,17 @@ public class UIScript : MonoBehaviour
         SceneManager.LoadScene(2);
     }
 
-    public void Pause()
+    public void Pause(AudioSource AudioPause)
     {
         //PauseMenu.SetActive(true);
+        AudioPause.Play();
         Time.timeScale = 0f;
     }
 
-    public void UnPause()
+    public void UnPause(AudioSource AudioUnPause)
     {
         //PauseMenu.SetActive(false);
+        AudioUnPause.Play();
         Time.timeScale = 1f;
     }
 
