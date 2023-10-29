@@ -10,6 +10,8 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] private Room room;
 
+    [SerializeField] private float initialHealth;
+
     private bool active;
 
     // Start is called before the first frame update

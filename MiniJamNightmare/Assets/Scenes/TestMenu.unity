@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomPrefab: {fileID: 7656505447322550653, guid: ba2941a94f7eaa642bf64118115b20ea, type: 3}
-  panSpeed: 5
+  panSpeed: 1
 --- !u!4 &1131194792
 Transform:
   m_ObjectHideFlags: 0

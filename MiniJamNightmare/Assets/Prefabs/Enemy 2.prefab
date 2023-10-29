@@ -149,3 +149,5 @@ MonoBehaviour:
   health: 50
   destroyEffect: {fileID: 1119044058240589691, guid: 9a3a90c491698784ba437619860d74a9, type: 3}
   bloodSplash: {fileID: 6783836589316717286, guid: 51c0ed800525b5d40b610f2758468734, type: 3}
+  room: {fileID: 0}
+  initialHealth: 30
