@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Room : MonoBehaviour
 {
-    [SerializeField] private GameplayManager gameManager;
-    
     [SerializeField] private GameObject[] enemyPrefabs;
 
     [SerializeField] private GameObject gate;
@@ -153,7 +151,7 @@ public class Room : MonoBehaviour
 
     public void Activate()
     {
-        foreach (GameObject e in enemies) e.GetComponent<EnemyMove>().Activate();
+        //foreach (GameObject e in enemies) e.GetComponent<EnemyMove>().Activate();
     }
 
     public void EnemyKilled(GameObject enemy)

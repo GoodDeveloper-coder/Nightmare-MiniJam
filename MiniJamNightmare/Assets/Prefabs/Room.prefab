@@ -9409,9 +9409,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   enemyPrefabs:
-  - {fileID: 824292976528609417, guid: f9ea6b025c29afc42958907044ec960e, type: 3}
-  - {fileID: 8268683450149952083, guid: 449d062ae90decc48b09e81b4e418d4c, type: 3}
-  - {fileID: 8716142526439802609, guid: 25551aa5afaa27145aeafa8288164260, type: 3}
+  - {fileID: 6198305057392996494, guid: 37430c4be4394d24284902f078c91614, type: 3}
+  - {fileID: 906923334751721565, guid: e8a69d9a8c95ec242950b4139f15f093, type: 3}
+  - {fileID: 2862305848925571967, guid: 60e03689ec1b7664ea5286ba8eae0bda, type: 3}
   gate: {fileID: 8255640797230979165}
 --- !u!1 &8255640797230979165
 GameObject:
