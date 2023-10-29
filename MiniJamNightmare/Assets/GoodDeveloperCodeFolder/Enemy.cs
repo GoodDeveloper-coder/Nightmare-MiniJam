@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    Animator _anim; 
+
     public int health;
     public GameObject destroyEffect;
     public GameObject bloodSplash;
@@ -17,7 +19,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        _anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -31,7 +33,8 @@ public class Enemy : MonoBehaviour
             Instantiate(destroyEffect, transform.position, Quaternion.identity);
             Instantiate(destroyEffect, transform.position, Quaternion.identity);
             Instantiate(Resources.Load("Coin"), transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            _anim.SetTrigger("death");
+            Destroy(gameObject,1f);
         }
     }
 
