@@ -10,8 +10,8 @@ public class ColossalEnemy : MonoBehaviour
 
     [SerializeField] private Rigidbody2D rb;
 
-    [SerializeField] private float initialMovementSpeed;
-    [SerializeField] private float movementSpeedIncrement;
+    [SerializeField] private float initialMovementSpeed = 0.5f;
+    [SerializeField] private float movementSpeedIncrementFactor = 0.05f;
 
     private float currentMovementSpeed;
 
@@ -56,7 +56,7 @@ public class ColossalEnemy : MonoBehaviour
 
     public void SpeedUp()
     {
-        currentMovementSpeed += movementSpeedIncrement;
+        currentMovementSpeed *= movementSpeedIncrementFactor;
     }
 
     IEnumerator FootStepsSound()

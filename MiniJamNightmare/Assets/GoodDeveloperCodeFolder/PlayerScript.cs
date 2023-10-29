@@ -81,7 +81,7 @@ public class PlayerScript : MonoBehaviour
         if (collider.transform.tag == "Trigger")
         {
             Destroy(collider.transform.gameObject);
-            room.Activate(this);
+            room.Activate();
             return;
         }
         if (collider.transform.tag == "Colossal") GameOver();
