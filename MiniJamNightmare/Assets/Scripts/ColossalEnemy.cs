@@ -41,7 +41,7 @@ public class ColossalEnemy : MonoBehaviour
         if (other.transform.tag == "Ground")
         {
             Destroy(other.transform.gameObject);
-            for (int i = 0; i < 7; i++) Instantiate(explosionPrefab, other.transform.position + Vector3.up * (1f + i - 7f) / 2f, transform.rotation);
+            for (int i = 0; i < 7; i++) Instantiate(explosionPrefab, other.transform.position + Vector3.up * (0.5f + i - 3.5f), transform.rotation);
             return;
         }
     }

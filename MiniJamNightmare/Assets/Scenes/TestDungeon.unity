@@ -1963,7 +1963,7 @@ MonoBehaviour:
   explosionPrefab: {fileID: 1119044058240589691, guid: 9a3a90c491698784ba437619860d74a9, type: 3}
   rb: {fileID: 0}
   initialMovementSpeed: 1
-  movementSpeedIncrement: 0.1
+  movementSpeedIncrementFactor: 0.05
 --- !u!1 &283215163
 GameObject:
   m_ObjectHideFlags: 0
@@ -12524,15 +12524,15 @@ MonoBehaviour:
   movementScript: {fileID: 0}
   maxHP: 10
   initialMovementSpeed: 2.5
-  movementSpeedUpgrade: 0.1
+  movementSpeedUpgradeFactor: 0
   initialFireRate: 2.5
-  fireRateUpgrade: 0.5
+  fireRateUpgradeFactor: 0
   initialOffense: 1
-  offenseUpgrade: 0.1
+  offenseUpgradeFactor: 0
   initialDefense: 1
-  defenseUpgrade: 0.1
+  defenseUpgradeFactor: 0
   initialMaxAmmo: 30
-  maxAmmoUpgrade: 5
+  maxAmmoUpgradeFactor: 0
 --- !u!58 &1693710335
 CircleCollider2D:
   m_ObjectHideFlags: 0
