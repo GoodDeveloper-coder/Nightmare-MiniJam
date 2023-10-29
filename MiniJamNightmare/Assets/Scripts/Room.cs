@@ -151,7 +151,7 @@ public class Room : MonoBehaviour
 
     public void Activate()
     {
-        //foreach (GameObject e in enemies) e.GetComponent<EnemyMove>().Activate();
+        foreach (GameObject e in enemies) e.GetComponent<EnemyMove>().Activate();
     }
 
     public void EnemyKilled(GameObject enemy)
@@ -162,7 +162,11 @@ public class Room : MonoBehaviour
             if (enemy == enemies[i]) enemies[i] = null;
             else if (enemies[i] != null) clear = false;
         }
-        if (clear) Destroy(gate);
+    }
+
+    public void DestroyGate()
+    {
+        Destroy(gate);
     }
 
     public bool GetClear()

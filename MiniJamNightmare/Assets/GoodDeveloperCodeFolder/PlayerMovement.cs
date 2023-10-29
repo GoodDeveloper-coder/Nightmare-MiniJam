@@ -32,4 +32,9 @@ public class PlayerMovement : MonoBehaviour
     {
         speed = s;
     }
+
+    public Vector2 GetPosition()
+    {
+        return rb.position;
+    }
 }

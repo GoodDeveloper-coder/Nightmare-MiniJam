@@ -82,9 +82,13 @@ public class PlayerScript : MonoBehaviour
         {
             Destroy(collider.transform.gameObject);
             room.Activate();
-            return;
         }
-        if (collider.transform.tag == "Colossal") GameOver();
+        else if (collider.transform.tag == "Colossal") GameOver();
+        else if (collider.transform.tag == "Orb")
+        {
+            collider.transform.gameObject.GetComponent<EnemyOrb>().Explode();
+            PlayerHP -= PlayerTakeEnemyDamage;
+        }
     }
 
     private void GameOver()

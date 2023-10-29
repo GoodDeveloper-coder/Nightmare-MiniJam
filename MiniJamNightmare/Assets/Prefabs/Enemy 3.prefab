@@ -151,7 +151,6 @@ MonoBehaviour:
   destroyEffect: {fileID: 1119044058240589691, guid: 9a3a90c491698784ba437619860d74a9, type: 3}
   bloodSplash: {fileID: 6783836589316717286, guid: 51c0ed800525b5d40b610f2758468734, type: 3}
   room: {fileID: 0}
-  initialHealth: 20
 --- !u!114 &3102206066350134477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,4 +164,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 2
-  _radiusVision: 0
+  minOrbInterval: 4
+  maxOrbInterval: 6
+  orbPrefab: {fileID: 343550282028440582, guid: 28128e678337d2241bbfbe1a83ef4d7b, type: 3}

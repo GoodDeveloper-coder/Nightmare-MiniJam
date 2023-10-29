@@ -58,6 +58,7 @@ public class GameplayManager : MonoBehaviour
 
     public void Upgrade(int upgrade)
     {
+        previousRoom.DestroyGate();
         clear = false;
         hUD.SetActive(true);
     }

@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Colossal
   - Trigger
+  - Orb
   layers:
   - Default
   - TransparentFX

@@ -6,53 +6,61 @@ public class EnemyMove : MonoBehaviour
 {
     Transform _target;
     [SerializeField] float _speed;
-    Vector3 _actualScale;
-    Vector3 _changeScale;
-    [SerializeField]float _radiusVision;
-    Rigidbody2D rb;
     //private bool CanAttack;
+
+    [SerializeField] private float minOrbInterval;
+    [SerializeField] private float maxOrbInterval;
+
+    [SerializeField] private GameObject orbPrefab;
+
+    private Vector3 _scale;
+
+    private bool active;
+
+    private float orbInterval;
+    private float orbTime;
 
     private void Start()
     {
-        _actualScale = transform.localScale;
-        _changeScale = transform.localScale;
-        _changeScale.x *= -1;
         _target = GameObject.Find("Player").transform;
-        rb = GetComponent<Rigidbody2D>();
+        orbInterval = Random.Range(minOrbInterval, maxOrbInterval);
+        _scale = transform.localScale;
     }
     // Update is called once per frame
     void Update()
     {
-        _target = GameObject.Find("Player").transform;
+        if (!active) return;
+        if (orbPrefab != null) OrbManagement();
         //if (CanAttack)
         //{
         DirectionScale();
-        if (Vector2.Distance(transform.position, _target.position) < _radiusVision)
-        {
-            Vector2 direction = (_target.position - transform.position).normalized;
-            rb.velocity = direction * _speed;
-        }
-        else
-        {
-            rb.velocity = Vector2.zero;
-        }
+        transform.position = Vector2.MoveTowards(transform.position, _target.position, _speed * Time.deltaTime);
         //}
         //DirectionScale();
         //transform.position = Vector2.MoveTowards(transform.position, _target.position, _speed * Time.deltaTime);
     }
 
+    public void Activate()
+    {
+        active = true;
+    }
+
+    private void OrbManagement()
+    {
+        orbTime += Time.deltaTime;
+        if (orbTime >= orbInterval)
+        {
+            orbTime = 0;
+            orbInterval = Random.Range(minOrbInterval, maxOrbInterval);
+            GameObject orb = Instantiate(orbPrefab, transform.position, transform.rotation);
+            Vector3 distance = _target.position - transform.position;
+            orb.GetComponent<EnemyOrb>().SetDirection(new Vector2(distance.x, distance.y));
+        }
+    }
+
     void DirectionScale()
     {
-        if(transform.position.x > _target.position.x)
-        {
-     
-            transform.localScale = _actualScale;
-        }
-        else
-        {
-    
-            transform.localScale = _changeScale;
-        }
+        transform.localScale = transform.position.x > _target.position.x ? transform.localScale = new Vector3(-_scale.x, _scale.y, _scale.z) : _scale;
     }
     /*
     private void OnTriggerEnter2D(Collider2D collision)
