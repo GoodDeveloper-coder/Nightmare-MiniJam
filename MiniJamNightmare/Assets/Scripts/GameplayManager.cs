@@ -25,6 +25,7 @@ public class GameplayManager : MonoBehaviour
     {
         currentRoom.GenerateEnemies(0);
         nextRoom.GenerateEnemies(1);
+        player.SetRoom(currentRoom);
     }
 
     // Update is called once per frame
@@ -50,7 +51,7 @@ public class GameplayManager : MonoBehaviour
         previousRoom = currentRoom;
         currentRoom = nextRoom;
         player.SetRoom(currentRoom);
-        nextRoom = Instantiate(roomPrefab, transform.position = Vector3.right * 30, transform.rotation).GetComponent<Room>();
+        nextRoom = Instantiate(roomPrefab, currentRoom.transform.position + Vector3.right * 30, transform.rotation).GetComponent<Room>();
         nextRoom.GenerateEnemies(roomsCleared);
         colossal.SpeedUp();
     }

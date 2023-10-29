@@ -70,12 +70,13 @@ public class Room : MonoBehaviour
 
         }
         enemies = enemyList.ToArray();
+        foreach (GameObject e in enemies) e.GetComponent<Enemy>().SetRoom(this);
         clear = false;
     }
 
     public void Activate(PlayerScript p)
     {
-        foreach (GameObject e in enemies) e.GetComponent<SmallEnemy>().Activate(p);
+        foreach (GameObject e in enemies) e.GetComponent<Enemy>().Activate(p);
     }
 
     public void EnemyKilled(GameObject enemy)

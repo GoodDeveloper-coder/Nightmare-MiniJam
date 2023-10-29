@@ -21,7 +21,6 @@ public class ColossalEnemy : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        active = false;
         currentMovementSpeed = initialMovementSpeed;
     }
 
@@ -33,16 +32,16 @@ public class ColossalEnemy : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!active) return;
+        //if (!active) return;
         rb.MovePosition(rb.position + Vector2.right * currentMovementSpeed * Time.deltaTime);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.transform.tag == "Ground")
+        if (other.transform.tag == "Ground")
         {
-            Destroy(collision.transform.gameObject);
-            for (int i = 0; i < 7; i++) Instantiate(explosionPrefab, collision.transform.position + Vector3.up * (1f + i - 7f) / 2f, transform.rotation);
+            Destroy(other.transform.gameObject);
+            for (int i = 0; i < 7; i++) Instantiate(explosionPrefab, other.transform.position + Vector3.up * (1f + i - 7f) / 2f, transform.rotation);
             return;
         }
     }
