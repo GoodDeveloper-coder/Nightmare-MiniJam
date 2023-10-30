@@ -3308,7 +3308,7 @@ MonoBehaviour:
   _anim: {fileID: 11475007}
   initialMovementSpeed: 0.5
   movementSpeedIncrement: 0.1
-  animationSpeedFactor: 0.2
+  animationSpeedFactor: 0.4
   AudioSourceFootSteps: {fileID: 271173261}
 --- !u!82 &271173261
 AudioSource:
