@@ -4,16 +4,12 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public int health;
+    public float health;
     public GameObject destroyEffect;
     public GameObject bloodSplash;
 
     [SerializeField] private Room room;
-
-    [SerializeField] private float initialHealth;
-
-    private bool active;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +19,6 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!active) return;
         if (health <= 0)
         {
             room.EnemyKilled(gameObject);
@@ -48,11 +43,5 @@ public class Enemy : MonoBehaviour
     public void SetRoom(Room r)
     {
         room = r;
-    }
-
-    public void Activate(PlayerScript p)
-    {
-        active = true;
-        //player = p;
     }
 }

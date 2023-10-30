@@ -151,9 +151,9 @@ public class Room : MonoBehaviour
         clear = false;
     }
 
-    public void Activate(PlayerScript p)
+    public void Activate()
     {
-        foreach (GameObject e in enemies) e.GetComponent<Enemy>().Activate(p);
+        foreach (GameObject e in enemies) e.GetComponent<EnemyMove>().Activate();
     }
 
     public void EnemyKilled(GameObject enemy)

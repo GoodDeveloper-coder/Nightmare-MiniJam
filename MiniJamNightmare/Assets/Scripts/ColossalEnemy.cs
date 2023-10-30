@@ -10,8 +10,8 @@ public class ColossalEnemy : MonoBehaviour
 
     [SerializeField] private Rigidbody2D rb;
 
-    [SerializeField] private float initialMovementSpeed;
-    [SerializeField] private float movementSpeedIncrement;
+    [SerializeField] private float initialMovementSpeed = 1f;
+    [SerializeField] private float movementSpeedIncrement = 0.1f;
 
     private float currentMovementSpeed;
 

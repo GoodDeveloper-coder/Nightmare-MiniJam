@@ -8,6 +8,8 @@ public class EnemyMove : MonoBehaviour
     [SerializeField] float _speed;
     //private bool CanAttack;
 
+    private bool active;
+
     private void Start()
     {
         _target = GameObject.Find("Player").transform;
@@ -15,6 +17,7 @@ public class EnemyMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!active) return;
         //if (CanAttack)
         //{
         DirectionScale();
@@ -22,6 +25,11 @@ public class EnemyMove : MonoBehaviour
         //}
         //DirectionScale();
         //transform.position = Vector2.MoveTowards(transform.position, _target.position, _speed * Time.deltaTime);
+    }
+
+    public void Activate()
+    {
+        active = true;
     }
 
     void DirectionScale()
