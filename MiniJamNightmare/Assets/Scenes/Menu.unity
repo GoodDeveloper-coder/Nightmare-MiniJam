@@ -747,13 +747,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'GoodDeveloper:
+  m_text: 'ITDeveloper:
 
-    Runner:
+    JUMPER66:
 
     Meswif:
 
-    Mia:
+    MVS:
 
     Zufaix:'
   m_isRightToLeft: 0
@@ -782,8 +782,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 38
+  m_fontSizeBase: 38
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1343,6 +1343,7 @@ GameObject:
   - component: {fileID: 1015683416}
   - component: {fileID: 1015683415}
   - component: {fileID: 1015683419}
+  - component: {fileID: 1015683420}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1450,6 +1451,102 @@ MonoBehaviour:
   mainMenu: {fileID: 263330800}
   helpMenu: {fileID: 23673934}
   creditsMenu: {fileID: 1032219249}
+--- !u!82 &1015683420
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015683414}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d87ca72eefc5840faa7321b0f0d42810, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1016881614
 GameObject:
   m_ObjectHideFlags: 0
@@ -2602,24 +2699,27 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Move with the arrow keys or WASD.
+  m_text: 'You are being chased by the dreaded Skullossus. Don''t let him catch up!
 
-    Aim with the mouse.
+    Kill
+    all enemies in each room to unlock the next one.
 
-    Mouse
-    left click to shoot.
+    After clearing a room,
+    you can choose one of 3 random upgrades.
 
-    R key to reload.
+    Skullossus doesn''t mess around:
+    neither should you. Time won''t even stop for you when choosing each upgrade,
+    so always be quick to make a decision!
 
 
-    Kill all enemies in each room
-    to unlock the next one.
+    Move with the arrow keys or WASD.
 
-    After clearing a room, you can choose one of 3 random
-    upgrades.
+    Aim
+    with the mouse.
 
-    Beware: The great Skullossus is chasing you! Getting caught means
-    an instant Game Over so don''t mess around, even when choosing upgrades!'
+    Mouse left click to shoot.
+
+    R key to reload.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 11d94efe4dc9cd9488db16c2b186a463, type: 2}
   m_sharedMaterial: {fileID: 935731961946257078, guid: 11d94efe4dc9cd9488db16c2b186a463, type: 2}
@@ -2658,9 +2758,9 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 50
+  m_lineSpacing: 0
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: 50
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
@@ -2790,8 +2890,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 38
+  m_fontSizeBase: 38
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

@@ -67,7 +67,7 @@ public class ColossalEnemy : MonoBehaviour
 
     IEnumerator FootStepsSound()
     {
-        yield return new WaitForSeconds(3f * initialMovementSpeed / currentMovementSpeed);
+        yield return new WaitForSeconds(0.5f * initialMovementSpeed / (currentMovementSpeed * animationSpeedFactor));
         AudioSourceFootSteps.Play();
         StartCoroutine(FootStepsSound());
     }

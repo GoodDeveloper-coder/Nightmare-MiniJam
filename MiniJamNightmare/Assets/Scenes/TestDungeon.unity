@@ -2095,7 +2095,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 'Your score: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 11d94efe4dc9cd9488db16c2b186a463, type: 2}
   m_sharedMaterial: {fileID: 935731961946257078, guid: 11d94efe4dc9cd9488db16c2b186a463, type: 2}
@@ -23865,7 +23865,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f7b1a2a47d5b045cc97419edff11e2c2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6451b8a5acb214ce0b3aa22fd3d81272, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
