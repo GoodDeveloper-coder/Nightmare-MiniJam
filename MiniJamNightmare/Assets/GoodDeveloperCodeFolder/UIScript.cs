@@ -22,12 +22,12 @@ public class UIScript : MonoBehaviour
     public void PlayAgain(int SceneIndex)
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneIndex);
+        SceneManager.LoadScene("TestDungeon");
     }
 
     public void Play()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("TestDungeon");
     }
 
     public void Pause(AudioSource AudioPause)
@@ -47,7 +47,7 @@ public class UIScript : MonoBehaviour
     public void GoToMenu()
     {
         Time.timeScale = 1f;        
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Menu");
     }
 
     public void QuitGame()

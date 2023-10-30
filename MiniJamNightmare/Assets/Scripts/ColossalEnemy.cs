@@ -13,7 +13,7 @@ public class ColossalEnemy : MonoBehaviour
     [SerializeField] private Animator _anim;
 
     [SerializeField] private float initialMovementSpeed = 1f;
-    [SerializeField] private float movementSpeedIncrement = 0.1f;
+    [SerializeField] private float movementSpeedIncrementFactor = 0.1f;
 
     [SerializeField] private float animationSpeedFactor = 0.5f;
 
@@ -61,7 +61,7 @@ public class ColossalEnemy : MonoBehaviour
 
     public void SpeedUp()
     {
-        currentMovementSpeed += movementSpeedIncrement;
+        currentMovementSpeed *= 1 + movementSpeedIncrementFactor;
         _anim.speed = currentMovementSpeed * animationSpeedFactor;
     }
 
