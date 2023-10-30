@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (direction.x == 0 && direction.y == 0) return;
         rb.MovePosition(rb.position + direction.normalized * speed * Time.fixedDeltaTime);
     }
 
