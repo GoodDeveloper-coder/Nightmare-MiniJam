@@ -8,7 +8,9 @@ public class EnemyMove : MonoBehaviour
     [SerializeField] float _speed;
     //private bool CanAttack;
 
-    [SerializeField] private Animator _anim;
+    [SerializeField] private GameObject _objectIdle;
+    [SerializeField] private GameObject _objectRun;
+    [SerializeField] private Animator _animRun;
 
     [SerializeField] private float animationSpeedFactor = 0.5f;
 
@@ -29,7 +31,7 @@ public class EnemyMove : MonoBehaviour
         _target = GameObject.Find("Player").transform;
         orbInterval = Random.Range(minOrbInterval, maxOrbInterval);
         _scale = transform.localScale;
-        _anim.speed = _speed * animationSpeedFactor;
+        _objectRun.SetActive(false);
     }
     // Update is called once per frame
     void Update()
@@ -48,11 +50,19 @@ public class EnemyMove : MonoBehaviour
     public void Activate()
     {
         active = true;
+        _objectIdle.SetActive(false);
+        _objectRun.SetActive(true);
+        _animRun.speed = _speed * animationSpeedFactor;
     }
 
     public void Deactivate()
     {
         active = false;
+    }
+
+    public bool GetActive()
+    {
+        return active;
     }
 
     private void OrbManagement()

@@ -17,6 +17,8 @@ public class GunScript : MonoBehaviour
     public int MaxGunAmmo = 30;
     public int GunAmmo = 30;
 
+    public float ReloadTime;
+
     public TextMeshProUGUI AmmoText;
 
     public AudioSource AudioSource;
@@ -30,7 +32,7 @@ public class GunScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        AmmoText.text = string.Format($"Ammo:{GunAmmo}");
+        if (GunAmmo > 0) AmmoText.text = string.Format($"Ammo:{GunAmmo}");
         //Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         //float rotateZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         //transform.rotation = Quaternion.Euler(0f, 0f, rotateZ + offset);
@@ -44,6 +46,7 @@ public class GunScript : MonoBehaviour
                 Instantiate(bullet, point.position, point.transform.rotation);
                 time = startTime;
                 animator.Play("MuzzleFlashAnim");
+                if (GunAmmo == 0) AmmoText.text = "R to Reload";
             }
         }
         else
@@ -51,9 +54,16 @@ public class GunScript : MonoBehaviour
             time -= Time.deltaTime;
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R) && GunAmmo == 0)
         {
-            GunAmmo = MaxGunAmmo;
+            AmmoText.text = "Reloading...";
+            StartCoroutine(Reload());
         }
+    }
+
+    IEnumerator Reload()
+    {
+        yield return new WaitForSeconds(ReloadTime);
+        GunAmmo = MaxGunAmmo;
     }
 }

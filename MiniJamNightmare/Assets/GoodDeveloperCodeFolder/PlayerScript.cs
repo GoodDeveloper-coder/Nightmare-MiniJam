@@ -96,6 +96,7 @@ public class PlayerScript : MonoBehaviour
         TimeFix();
         //Destroy(this.gameObject);
         DeathMenu.SetActive(true);
+        gameObject.SetActive(false);
     }
 
     public void SetRoom(Room r)

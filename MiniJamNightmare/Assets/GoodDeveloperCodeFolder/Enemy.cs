@@ -36,6 +36,7 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        if (!GetComponent<EnemyMove>().GetActive()) return;
         health -= damage;
     }
 

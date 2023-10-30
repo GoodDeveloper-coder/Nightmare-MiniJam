@@ -56,7 +56,7 @@ public class GameplayManager : MonoBehaviour
         colossal.SpeedUp();
     }
 
-    public void Upgrade(int upgrade)
+    public void Upgrade()
     {
         previousRoom.DestroyGate();
         clear = false;
