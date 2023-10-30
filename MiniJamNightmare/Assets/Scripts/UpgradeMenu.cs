@@ -48,12 +48,12 @@ public class UpgradeMenu : MonoBehaviour
 
     public void SpeedUpUpgrade(PlayerMovement PlayerMovementScript)
     {
-        PlayerMovementScript.speed *= 1.1f;
+        PlayerMovementScript.speed *= 1.25f;
     }
 
     public void FasterFireRateUpUpgrade(GunScript GunScript)
     {
-        GunScript.startTime /= 1.1f;
+        GunScript.startTime /= 1.25f;
     }
 
     public void FullRecoveryUpgrade(PlayerScript playerScript)
@@ -63,7 +63,7 @@ public class UpgradeMenu : MonoBehaviour
 
     public void DamageUpUpgrade(BulletPrefab BulletPrefabScript)
     {
-        BulletPrefabScript.damage *= 1.1f;
+        BulletPrefabScript.damage *= 1.25f;
     }
 
     public void MaxAmmoUpgradeScript(GunScript GunScript)
@@ -73,16 +73,16 @@ public class UpgradeMenu : MonoBehaviour
 
     public void DefenseUpgrade(PlayerScript PlayerScript)
     {
-        PlayerScript.PlayerTakeEnemyDamage /= 1.1f;
+        PlayerScript.PlayerTakeEnemyDamage /= 1.25f;
     }
 
     public void BulletSpeedUpgrade(BulletPrefab BulletPrefabScript)
     {
-        BulletPrefabScript.speed *= 1.1f;
+        BulletPrefabScript.speed *= 1.25f;
     }
 
     public void ReloadTimeUpgrade(GunScript GunScript)
     {
-        GunScript.ReloadTime /= 1.1f;
+        GunScript.ReloadTime /= 1.25f;
     }
 }
